@@ -351,8 +351,8 @@ export default class Game extends Phaser.Scene {
     }  
 
     if((this.player.getNumlife() <= 0) && (this.player.y) > 975){
-      this.scene.scene.launch('termenu');
-      this.scene.scene.stop('playgame');
+      this.scene.launch('termenu');
+      this.scene.stop('playgame');
     }
     
     // Collider de player
