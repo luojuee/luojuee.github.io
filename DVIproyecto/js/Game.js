@@ -100,11 +100,6 @@ export default class Game extends Phaser.Scene {
         this.scene.touchmeat.setVolume(1);
         this.scene.soundOn = true;
       }
-
-      if((this.player.getNumlife() <= 0) && (this.player.y) > 975){
-        this.scene.scene.stop('playgame');
-        this.scene.scene.launch('termenu');
-      }
     });
 
     // animaciones de player
@@ -354,6 +349,11 @@ export default class Game extends Phaser.Scene {
         this.rocketgroup.remove(this.rocketgroup.getChildren()[i], true, true);
       }
     }  
+
+    if((this.player.getNumlife() <= 0) && (this.player.y) > 975){
+      this.scene.scene.launch('termenu');
+      this.scene.scene.stop('playgame');
+    }
     
     // Collider de player
     this.physics.add.collider(
