@@ -101,7 +101,7 @@ export default class Game extends Phaser.Scene {
         this.scene.soundOn = true;
       }
 
-      if((this.player.getNumlife() <= 0) && (this.player.y) > 1030){
+      if((this.player.getNumlife() <= 0) && (this.player.y) > 975){
         this.scene.scene.stop('playgame');
         this.scene.scene.launch('termenu');
       }
