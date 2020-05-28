@@ -88,8 +88,9 @@ export default class Player extends Phaser.GameObjects.Sprite {
       this.play('player_normal',true);
     });
 
-    if(this.life == 0){
+    if(this.life <= 0){
       this.play('player_die',false);
+      this.body.setVelocity(0,200);
       this.gameover = true;
     }
   }
