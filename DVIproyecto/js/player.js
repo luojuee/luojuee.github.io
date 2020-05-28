@@ -91,7 +91,6 @@ export default class Player extends Phaser.GameObjects.Sprite {
     if(this.life <= 0){
       this.play('player_die',false);
       this.body.setVelocity(0,200);
-      this.gameover = true;
     }
   }
 }

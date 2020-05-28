@@ -100,6 +100,11 @@ export default class Game extends Phaser.Scene {
         this.scene.touchmeat.setVolume(1);
         this.scene.soundOn = true;
       }
+
+      if((this.player.getNumlife() <= 0) && (this.player.y) > 1030){
+        this.scene.scene.stop('playgame');
+        this.scene.scene.launch('termenu');
+      }
     });
 
     // animaciones de player
