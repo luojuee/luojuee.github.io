@@ -13,17 +13,17 @@
 
 <body>
     <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Underwater crisis</b></a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#description" class="w3-bar-item w3-button">Description</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#github" class="w3-bar-item w3-button">Github</a>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>Underwater crisis</b></a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#description" class="w3-bar-item w3-button">Description</a>
+          <a href="#about" class="w3-bar-item w3-button">About</a>
+          <a href="#github" class="w3-bar-item w3-button">Github</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 	
     <div id="home">
 		<script type="module">
@@ -58,10 +58,29 @@
         var game = new Phaser.Game(config);
     </script>
     </div>
-<!-- Footer -->
-<footer class="w3-center w3-white w3-padding-16">
-  <p>Powered by：UCM dvi grupo 9</p>
-</footer>
+  
+  <div class="w3-container w3-padding-16 w3-card" id="description">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Description</h3>
+    <p>Es un juego inspirado en el juego "Feeding".
+      UNDERWATER CRISIS es un juego en el que los jugadores desempeñan el papel de tiburón.
+      Al comer bancos de peces, conseguirá puntos, pero ¡cuidado! hay peces venenosos.
+      También aparecerán submarinos y bombas en el océano, son una amenaza para los jugadores. 
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-16 w3-card" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>
+      Al comienzo del juego, el jugador tiene 3 vidas y 20 balas.
+      WASD: movimiento de control           Q: ataque
+      Finaliza el juego cuando la vida del jugador es 0.
+    </p>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-light-grey w3-padding-16">
+    <p>Powered by：UCM dvi grupo 9</p>
+  </footer>
 	
 </body>
 
