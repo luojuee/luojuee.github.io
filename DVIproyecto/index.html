@@ -25,7 +25,37 @@
     </div>
 
     <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-      
+      <script type="module">
+        import Game from './js/Game.js';
+        import Menu from './js/Menu.js';
+        import TerMenu from './js/TerMenu.js';
+        import sceneSTOP from './js/sceneSTOP.js';
+
+        var config = {
+            type: Phaser.AUTO,
+            width: 1920,
+            height: 1080,
+            pixelArt: true,
+            input: {
+                gamepad: true
+            },
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            scene: [ Menu, Game, TerMenu, sceneSTOP],
+            physics: { 
+                default: 'arcade', 
+                arcade: { 
+                    gravity: { 
+                       // y: 400 
+                    }, 
+                    debug: false 
+                }
+            }
+        };
+        var game = new Phaser.Game(config);
+      </script>
     </header>
     
     <div class="w3-content w3-padding" style="max-width:1564px">
