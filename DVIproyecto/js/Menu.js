@@ -11,7 +11,7 @@ export default class Menu extends Phaser.Scene {
 
 	create() {
 	  	this.add.image(960, 540, 'preloaderBackground');
-		this.playButton = this.add.sprite(950, 900, 'button').setInteractive();
+		this.playButton = this.add.sprite(950, 715, 'button').setInteractive();
 		
 		this.playButton.on('pointerover', function(){
 	    	this.setFrame(1);

@@ -56,7 +56,7 @@ export default class Game extends Phaser.Scene {
   }
 
   create() {
-  	this.add.image(960, 540, 'background');
+  	this.add.image(960, 425, 'background');
     this.add.image(100, 100, 'life');
     this.add.image(500, 100, 'score');
     this.add.image(900, 100, 'bullet');
@@ -198,11 +198,11 @@ export default class Game extends Phaser.Scene {
     this.cubogroup = this.add.group();
 
      for (var i = 0; i < 7; i++){
-       this.SmallFish = new SmallFish(this, this.game.config.width, 300+Math.random()*700);
+       this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*700);
        this.smallgroup.add(this.SmallFish);
      };
      for (var i = 0; i < 2; i++){
-       this.BigFish = new BigFish(this, this.game.config.width, 300+Math.random()*700);
+       this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*700);
        this.biggroup.add(this.BigFish);
      };
 
@@ -232,14 +232,14 @@ export default class Game extends Phaser.Scene {
     this.cont++;
     // Genera pecesitos
     if(this.cont % 35 == 0){
-      this.SmallFish = new SmallFish(this, this.game.config.width, 300+Math.random()*700);
+      this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*700);
       this.smallgroup.add(this.SmallFish);
     }
     // Genera peces grandes
     if(this.cont % 45 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.BigFish = new BigFish(this, this.game.config.width, 300+Math.random()*700);
+        this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*700);
         this.biggroup.add(this.BigFish);
       }
     }
@@ -247,7 +247,7 @@ export default class Game extends Phaser.Scene {
     if(this.cont % 190 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.Minas = new Minas(this, Math.random()*this.game.config.width, 300+Math.random()*700);
+        this.Minas = new Minas(this, Math.random()*this.game.config.width, 230+Math.random()*700);
         this.Mingroup.add(this.Minas);
       }
     }
@@ -255,7 +255,7 @@ export default class Game extends Phaser.Scene {
     if(this.cont % 240 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.Submarino = new Submarino(this, this.game.config.width, 300+Math.random()*700);
+        this.Submarino = new Submarino(this, this.game.config.width, 230+Math.random()*700);
         this.subgroup.add(this.Submarino);
       }
     }
@@ -273,19 +273,19 @@ export default class Game extends Phaser.Scene {
       if(j < 0.3){
         var i = Math.random()*5;
         if(i < 1){
-          this.accesorio = new Vida(this, this.game.config.width, 300+Math.random()*700);
+          this.accesorio = new Vida(this, this.game.config.width, 230+Math.random()*700);
         }
         else if(i >= 1 && i < 2){
-          this.accesorio = new Balas(this, this.game.config.width, 300+Math.random()*700);
+          this.accesorio = new Balas(this, this.game.config.width, 230+Math.random()*700);
         }
         else if(i >= 2 && i < 3){
-          this.accesorio = new Bomba(this, this.game.config.width, 300+Math.random()*700);
+          this.accesorio = new Bomba(this, this.game.config.width, 230+Math.random()*700);
         }
         else if(i >= 3 && i < 4){
-          this.accesorio = new PezVeneno(this, this.game.config.width, 300+Math.random()*700);
+          this.accesorio = new PezVeneno(this, this.game.config.width, 230+Math.random()*700);
         }
         else{
-          this.accesorio = new Meat(this, this.game.config.width, 300+Math.random()*700);
+          this.accesorio = new Meat(this, this.game.config.width, 230+Math.random()*700);
         }
       }
     }
@@ -350,7 +350,7 @@ export default class Game extends Phaser.Scene {
       }
     }  
 
-    if((this.player.getNumlife() <= 0) && (this.player.y) > 975){
+    if((this.player.getNumlife() <= 0) && (this.player.y) > 770){
       this.scene.launch('termenu');
       this.scene.stop('playgame');
     }
