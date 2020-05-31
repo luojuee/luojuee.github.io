@@ -24,8 +24,10 @@
         </div>
       </div>
     </div>
-	
+
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home"></header>
     <div class="w3-container w3-content w3-wide" id="home">
+      <img class="w3-image" src="fundo.png">
 		<script type="module">
         import Game from './js/Game.js';
         import Menu from './js/Menu.js';
@@ -58,6 +60,7 @@
         var game = new Phaser.Game(config);
     </script>
     </div>
+  </header>
   
   <div class="w3-container w3-padding-16 w3-card" id="description">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Description</h3>
@@ -70,10 +73,17 @@
 
   <div class="w3-container w3-padding-16 w3-card" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Al comienzo del juego, el jugador tiene 3 vidas y 20 balas.</p>
+    <p>WASD: movimiento de control           Q: ataque</p>
+    <p>Finaliza el juego cuando la vida del jugador es 0.</p>
+    
+  </div>
+
+  <div class="w3-container w3-padding-16 w3-card" id="github">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Github</h3>
     <p>
-      Al comienzo del juego, el jugador tiene 3 vidas y 20 balas.
-      WASD: movimiento de control           Q: ataque
-      Finaliza el juego cuando la vida del jugador es 0.
+      <a href="https://github.com/luojuee/" class="w3-hover-text-green">Yifei Liu</a>
+      <a href="https://github.com/ZHAOYANNI" class="w3-hover-text-green">Zhaoyan Ni</a>
     </p>
   </div>
   
