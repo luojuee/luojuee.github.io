@@ -232,7 +232,7 @@ export default class Game extends Phaser.Scene {
     this.cont++;
     // Genera pecesitos
     if(this.cont % 35 == 0){
-      this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*700);
+      this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*500);
       this.smallgroup.add(this.SmallFish);
     }
     // Genera peces grandes
