@@ -239,7 +239,7 @@ export default class Game extends Phaser.Scene {
     if(this.cont % 45 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*700);
+        this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*500);
         this.biggroup.add(this.BigFish);
       }
     }
@@ -247,7 +247,7 @@ export default class Game extends Phaser.Scene {
     if(this.cont % 190 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.Minas = new Minas(this, Math.random()*this.game.config.width, 230+Math.random()*700);
+        this.Minas = new Minas(this, Math.random()*this.game.config.width, 230+Math.random()*500);
         this.Mingroup.add(this.Minas);
       }
     }
@@ -255,7 +255,7 @@ export default class Game extends Phaser.Scene {
     if(this.cont % 240 == 0){
       var j = Math.random();
       if(j < 0.3){
-        this.Submarino = new Submarino(this, this.game.config.width, 230+Math.random()*700);
+        this.Submarino = new Submarino(this, this.game.config.width, 230+Math.random()*500);
         this.subgroup.add(this.Submarino);
       }
     }
@@ -273,19 +273,19 @@ export default class Game extends Phaser.Scene {
       if(j < 0.3){
         var i = Math.random()*5;
         if(i < 1){
-          this.accesorio = new Vida(this, this.game.config.width, 230+Math.random()*700);
+          this.accesorio = new Vida(this, this.game.config.width, 230+Math.random()*500);
         }
         else if(i >= 1 && i < 2){
-          this.accesorio = new Balas(this, this.game.config.width, 230+Math.random()*700);
+          this.accesorio = new Balas(this, this.game.config.width, 230+Math.random()*500);
         }
         else if(i >= 2 && i < 3){
-          this.accesorio = new Bomba(this, this.game.config.width, 230+Math.random()*700);
+          this.accesorio = new Bomba(this, this.game.config.width, 230+Math.random()*500);
         }
         else if(i >= 3 && i < 4){
-          this.accesorio = new PezVeneno(this, this.game.config.width, 230+Math.random()*700);
+          this.accesorio = new PezVeneno(this, this.game.config.width, 230+Math.random()*500);
         }
         else{
-          this.accesorio = new Meat(this, this.game.config.width, 230+Math.random()*700);
+          this.accesorio = new Meat(this, this.game.config.width, 230+Math.random()*500);
         }
       }
     }
