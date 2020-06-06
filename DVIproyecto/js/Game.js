@@ -350,13 +350,11 @@ export default class Game extends Phaser.Scene {
       }
     }  
 
-    if(this.player.getNumlife() <= 0){
-      if(this.player.y > 770){
+    if((this.player.getNumlife() <= 0)&&(this.player.y > 770)){
         this.scene.launch('termenu');
         this.scene.stop('playgame');
-      }
     }
-    else{// Collider de player
+    // Collider de player
     this.physics.add.collider(
       this.player,
       this.Mingroup, 
@@ -481,7 +479,6 @@ export default class Game extends Phaser.Scene {
         this.soundExplosion2.play();
         Mingroup.destroy();
       }.bind(this)); 
-    }
   }
 
 }
