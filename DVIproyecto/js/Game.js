@@ -197,12 +197,12 @@ export default class Game extends Phaser.Scene {
     this.rocketgroup = this.add.group();
     this.cubogroup = this.add.group();
 
-     for (var i = 0; i < 7; i++){
-       this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*700);
+     for (var i = 0; i < 5; i++){
+       this.SmallFish = new SmallFish(this, this.game.config.width, 230+Math.random()*500);
        this.smallgroup.add(this.SmallFish);
      };
      for (var i = 0; i < 2; i++){
-       this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*700);
+       this.BigFish = new BigFish(this, this.game.config.width, 230+Math.random()*500);
        this.biggroup.add(this.BigFish);
      };
 
