@@ -226,6 +226,8 @@ export default class Game extends Phaser.Scene {
       this.player.play('player_normal',true);
       this.attack.play();
     });
+
+    this.colliderOff = false;
   }
 
   update(time, delta) {  
@@ -350,10 +352,15 @@ export default class Game extends Phaser.Scene {
       }
     }  
 
+    if(this.player.getNumlife() <= 0){
+      this.colliderOff = true;
+      this.physics.world.colliders.destroy();
+    }
     if((this.player.getNumlife() <= 0)&&(this.player.y > 770)){
         this.scene.launch('termenu');
         this.scene.stop('playgame');
     }
+    if( this.colliderOff == false){
     // Collider de player
     this.physics.add.collider(
       this.player,
@@ -478,7 +485,7 @@ export default class Game extends Phaser.Scene {
         this.explosion.play('explosion2');
         this.soundExplosion2.play();
         Mingroup.destroy();
-      }.bind(this)); 
+      }.bind(this)); }
   }
 
 }
