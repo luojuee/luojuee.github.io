@@ -22,6 +22,6 @@ export default class Cubo extends Phaser.GameObjects.Sprite {
   
     preUpdate(t,d) {
       super.preUpdate(t,d);
-      this.body.setVelocity(0, 300);
+      this.body.setVelocity(0, 250);
     }
   }
