@@ -53,6 +53,10 @@ export default class Game extends Phaser.Scene {
     this.load.audio('touchfish', 'assets/media/touchfish.ogg');
     this.load.audio('touchmeat', 'assets/media/touchmeat.ogg');
     this.load.audio('back', 'assets/media/background.mp3');
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 6d414f5d96691ad177c1ad60b4f64a5b8fb3ffb8
   }
 
   create() {
@@ -184,6 +188,10 @@ export default class Game extends Phaser.Scene {
 
     this.touchmeat = this.sound.add('touchmeat', config);
     this.touchfish = this.sound.add('touchfish', config);
+    
+    this.bgm = this.sound.add('back', config);
+    this.bgm.setLoop(true);
+    this.bgm.play();
 
     this.bgm = this.sound.add('back', config);
     this.bgm.setLoop(true);
