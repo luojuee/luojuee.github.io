@@ -52,7 +52,7 @@ export default class Game extends Phaser.Scene {
     this.load.audio('bombexplosion', 'assets/media/bombexplosion.ogg');
     this.load.audio('touchfish', 'assets/media/touchfish.ogg');
     this.load.audio('touchmeat', 'assets/media/touchmeat.ogg');
-    
+    this.load.audio('back', 'assets/media/background.mp3');
   }
 
   create() {
@@ -83,6 +83,7 @@ export default class Game extends Phaser.Scene {
         this.scene.bombexplosion.setVolume(0);
         this.scene.touchfish.setVolume(0);
         this.scene.touchmeat.setVolume(0);
+        this.scene.bgm.setVolume(0);
         this.scene.soundOn = false;
       }
       else{
@@ -98,6 +99,7 @@ export default class Game extends Phaser.Scene {
         this.scene.bombexplosion.setVolume(1);
         this.scene.touchfish.setVolume(1);
         this.scene.touchmeat.setVolume(1);
+        this.scene.bgm.setVolume(1);
         this.scene.soundOn = true;
       }
     });
@@ -183,7 +185,10 @@ export default class Game extends Phaser.Scene {
     this.touchmeat = this.sound.add('touchmeat', config);
     this.touchfish = this.sound.add('touchfish', config);
 
-    
+    this.bgm = this.sound.add('back', config);
+    this.bgm.setLoop(true);
+    this.bgm.play();
+
     this.player = new Player(this,300, 640);
     this.playerbullet;
     this.explosion = this.add.sprite(-10, -10, '');
