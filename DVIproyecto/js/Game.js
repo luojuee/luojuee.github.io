@@ -193,10 +193,6 @@ export default class Game extends Phaser.Scene {
     this.bgm.setLoop(true);
     this.bgm.play();
 
-    this.bgm = this.sound.add('back', config);
-    this.bgm.setLoop(true);
-    this.bgm.play();
-
     this.player = new Player(this,300, 640);
     this.playerbullet;
     this.explosion = this.add.sprite(-10, -10, '');
