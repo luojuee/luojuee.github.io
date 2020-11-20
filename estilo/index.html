@@ -5,39 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <link rel="stylesheet" href="./js/web.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="js/phaser.min.js"></script>
     <script type="module" src="js/primerapagina.js"></script>
     <title>Estilo gráfico</title>
 </head>
 
 <body>
-    <script type="module">
-      import Main from './Main.js';
-        var config = {
-            type: Phaser.AUTO,
-            width: 548,
-            height: 356,
-            input: {
-                gamepad: true
-            },
-            
-            scale: {
-                mode: Phaser.Scale.FIT,
-                autoCenter: Phaser.Scale.CENTER_BOTH
-            },
-            scene: [ Main],
-                      physics: { 
-                          default: 'arcade', 
-                          arcade: { 
-                              gravity: { 
-                                // y: 400 
-                              }, 
-                              debug: false 
-                          }
-                      }
-        };
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-padding w3-wide w3-card">
+        <a href="#game" class="w3-bar-item w3-button"><b>Estilo gráfico</b></a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#description" class="w3-bar-item w3-button">Description</a>
+          <a href="#about" class="w3-bar-item w3-button">About</a>
+          <a href="#github" class="w3-bar-item w3-button">Github</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="w3-padding">
+      <div class="w3-centered w3-padding-16" id="nuestrofondo">
+        <script>document.getElementById('nuestrofondo').focus();</script>
+      </div>
+      
+      <div class="w3-container w3-panel w3-padding-16 w3-card-2" id="description">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Description</h3>
+        <p>
+        </p>
+      </div>
 
-        var game = new Phaser.Game(config);
-    </script>
+      <div class="w3-container w3-panel w3-padding-16 w3-card-2" id="about">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+        <p></p> 
+      </div>
+
+      <div class="w3-container w3-panel w3-padding-16 w3-card-2" id="github">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Github</h3>
+        <p>
+        </p>
+      </div>
+      
+    </div>
 </body>
+
 </html>
