@@ -2,8 +2,8 @@ import Main from './Main.js';
 
 var config = {
     type: Phaser.AUTO,
-    width: 960,
-    height: 540,
+    width: 548,
+    height: 356,
     pixelArt: true,
     parent: 'nuestrofondo',
     input: {

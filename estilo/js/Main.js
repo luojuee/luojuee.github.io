@@ -3,14 +3,13 @@ export default class Main extends Phaser.Scene {
 	    super({ key: 'main' });
 	}
 	preload() {  
-	  	//this.load.image('preloaderBackground', 'assets/images/loadingbackground-sheet0.png');
+	  	this.load.image('capainferior', 'assets/fondos/layers/1.png');
 	}
-
 	create() {
-	  	//this.add.image(960, 540, 'preloaderBackground');
+		  this.capainfe = this.add.tileSprite(0, 0, this.game.config.width, this.game.config.height, 'capainferior');
 	}
 
 	update(titleme, delta) {
-	    
+	    this.capainfe.tilePositionX += 2
 	}
 }
