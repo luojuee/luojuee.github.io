@@ -10,6 +10,6 @@ export default class Main extends Phaser.Scene {
 	}
 
 	update(titleme, delta) {
-	    this.capainfe.tilePositionX += 0.5
+	    this.capainfe.tilePositionX += 0.2
 	}
 }
